@@ -16,10 +16,12 @@ def test_trivia_lists():
             else:
                 for key in list(dict_.keys()):
                     if key == "CONFIG":
+                        print("Config dict is linked Successful")
                         if not isinstance(dict_[key], dict):
                             problem_lists.append((l.stem, "CONFIG is not a dict"))
                     elif key == "AUTHOR":
                         if not isinstance(dict_[key], str):
+                            print("Author dict is linked Successful")
                             problem_lists.append((l.stem, "AUTHOR is not a string"))
                     else:
                         if not isinstance(dict_[key], list):
