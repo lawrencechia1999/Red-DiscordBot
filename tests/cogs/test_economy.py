@@ -1,15 +1,15 @@
 import pytest
 from redbot.pytest.economy import *
 
-
+# Edited wrong thing here for testing
 @pytest.mark.asyncio
 async def test_bank_register(bank, ctx):
-    default_bal = await bank.get_default_balance(ctx.guild)
+    # default_bal = await bank.get_default_balance(ctx.guild)
     assert default_bal == (await bank.get_account(ctx.author)).balance
 
 
 async def has_account(member, bank):
-    balance = await bank.get_balance(member)
+    # balance = await bank.get_balance(member)
     if balance == 0:
         balance = 1
     await bank.set_balance(member, balance)
