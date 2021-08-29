@@ -3,12 +3,14 @@ from redbot.pytest.alias import *
 
 
 def test_is_valid_alias_name(alias):
+    print("Test is valid alias name")
     assert alias.is_valid_alias_name("valid") is True
     assert alias.is_valid_alias_name("not valid name") is False
 
 
 @pytest.mark.asyncio
 async def test_empty_guild_aliases(alias, empty_guild):
+    print("Test empty guild aliases")
     assert list(await alias._aliases.get_guild_aliases(empty_guild)) == []
 
 
